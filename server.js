@@ -39,7 +39,7 @@ import mongoose from 'mongoose';
 import dotenv from "dotenv";
 import mainRouter from './routes/indexRouting.js';
 import bodyParser from 'body-parser';
-import cors from 'cors'; // ✅ ADD THIS
+import cors from 'cors'; //  sdded cors package handling
 
 dotenv.config();
 
@@ -50,9 +50,10 @@ const db_pass = process.env.DB_PASS;
 
 const app = express();
 
-// ✅ ALLOW REQUESTS FROM YOUR FRONTEND
+//  ALLOW REQUESTS FROM YOUR FRONTEND
 app.use(cors({
-  origin: "http://localhost:5173", // frontend URL
+  //origin: "http://localhost:5173", // frontend URL
+  origin:"https://to-do-planning-application-5w2vh1o57.vercel.app/",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
