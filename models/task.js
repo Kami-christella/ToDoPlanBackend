@@ -5,11 +5,7 @@ const { Schema, model } = mongoose;
 
 const taskSchema = new Schema(
     {
-        taskid:{
-          type: String,
-          required:false,
-          unique:true
-      },
+    
       taskname:{
           type: String,
           required:true
@@ -26,6 +22,6 @@ const taskSchema = new Schema(
         
 )
 
-const Task = model("Task", taskSchema);
+const Task = model("TaskTable", taskSchema);
 
 export default Task;
