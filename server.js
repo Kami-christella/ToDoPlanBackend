@@ -52,9 +52,9 @@ const app = express();
 
 //  ALLOW REQUESTS FROM YOUR FRONTEND
 app.use(cors({
-  //origin: "http://localhost:5173", // frontend URL
-  origin:"https://to-do-planning-application-5w2vh1o57.vercel.app/",
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: "http://localhost:5173", // frontend URL
+  //origin:"https://to-do-planning-application-5w2vh1o57.vercel.app/",
+  methods: ["GET", "POST", "PUT", "DELETE"], 
   credentials: true,
 }));
 
